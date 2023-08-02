@@ -20,7 +20,7 @@ const displayBottom = document.getElementById('answerDisplay');
 getInput()
 
 plus.addEventListener('click', () => {
-    displayTop.insertAdjacentHTML("beforeend", "+");
+    displayTop.insertAdjacentHTML("beforeend", "<p>+</p>");
 
     if (!a.length === true) {
         updateA(); 
@@ -40,7 +40,7 @@ plus.addEventListener('click', () => {
 );
 
 minus.addEventListener('click', () => {
-    displayTop.insertAdjacentHTML("beforeend", "-");
+    displayTop.insertAdjacentHTML("beforeend", "<p>-</p>");
 
     if (!a.length === true) {
         updateA(); 
@@ -57,7 +57,7 @@ minus.addEventListener('click', () => {
 });
 
 times.addEventListener('click', () => {
-    displayTop.insertAdjacentHTML("beforeend", "x");
+    displayTop.insertAdjacentHTML("beforeend", "<p>x</p>");
 
     if (!a.length === true) {
         updateA(); 
@@ -74,7 +74,7 @@ times.addEventListener('click', () => {
 });
 
 divide.addEventListener('click', () => {
-    displayTop.insertAdjacentHTML("beforeend", "&#247");
+    displayTop.insertAdjacentHTML("beforeend", "<p>&#247</p>");
 
     if (!a.length === true) {
         updateA(); 
@@ -92,7 +92,7 @@ divide.addEventListener('click', () => {
 
 del.addEventListener('click', () => {
     temp.pop();
-
+    displayTop.removeChild(displayTop.lastElementChild);
 })
 
 clear.addEventListener('click', () => {
@@ -136,45 +136,45 @@ function getInput() { //takes user input and store in temp array
 
     one.addEventListener('click', () => {
         temp.push(1);
-        displayTop.insertAdjacentHTML("beforeend", 1);
+        displayTop.insertAdjacentHTML("beforeend", "<p>1</p>");
 
 
     });
     two.addEventListener('click', () => {
         temp.push(2)
-        displayTop.insertAdjacentHTML("beforeend", 2)
+        displayTop.insertAdjacentHTML("beforeend", "<p>2</p>")
     });
     three.addEventListener('click', () => {
         temp.push(3)
-        displayTop.insertAdjacentHTML("beforeend", 3)
+        displayTop.insertAdjacentHTML("beforeend", "<p>3</p>")
     });
     four.addEventListener('click', () => {
         temp.push(4)
-        displayTop.insertAdjacentHTML("beforeend", 4)
+        displayTop.insertAdjacentHTML("beforeend", "<p>4</p>")
     });
     five.addEventListener('click', () => {
         temp.push(5)
-        displayTop.insertAdjacentHTML("beforeend", 5)
+        displayTop.insertAdjacentHTML("beforeend", "<p>5</p>")
     });
     six.addEventListener('click', () => {
         temp.push(6)
-        displayTop.insertAdjacentHTML("beforeend", 6)
+        displayTop.insertAdjacentHTML("beforeend", "<p>6</p>")
     });
     seven.addEventListener('click', () => {
         temp.push(7)
-        displayTop.insertAdjacentHTML("beforeend", 7)
+        displayTop.insertAdjacentHTML("beforeend", "<p>7</p>")
     });
     eight.addEventListener('click', () => {
         temp.push(8)
-        displayTop.insertAdjacentHTML("beforeend", 8)
+        displayTop.insertAdjacentHTML("beforeend", "<p>8</p>")
     });
     nine.addEventListener('click', () => {
         temp.push(9)
-        displayTop.insertAdjacentHTML("beforeend", 9)
+        displayTop.insertAdjacentHTML("beforeend", "<p>9</p>")
     });
     zero.addEventListener('click', () => {
         temp.push(0)
-        displayTop.insertAdjacentHTML("beforeend", 0)
+        displayTop.insertAdjacentHTML("beforeend", "<p>0</p>")
     });
 }
 function updateA () {//sets temp array to A variable, and then resets temp array to zilch 
